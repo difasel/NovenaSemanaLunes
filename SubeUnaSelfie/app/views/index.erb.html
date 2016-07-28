@@ -1,0 +1,20 @@
+<h1>Welcome to Selfie!</h1>
+
+<!-- # Verificar que sea post, y que tenga el atributo enctype -->
+<form method="post" enctype='multipart/form-data' action="upload">
+  <!-- # Verificar que name corresponda al nombre/campo del modelo -->
+  <input type='file' name='photo[photo]'>
+  <br/>
+  <br>
+  <input type='submit' value='Upload!'>
+</form>
+
+
+<% @photos = Photo.all %>
+<ul>
+  <% @photos.each do |photo| %>
+    <div> 
+      <img src="<%= photo.photo %>">
+    </div>
+  <% end %>
+</ul>

@@ -1,0 +1,8 @@
+<ul>
+  <% @photos.each do |photo| %>
+    <div> 
+      <img src="<%= photo.photo(:thumb) %>">
+    </div>
+  <% end %>
+</ul>
+
